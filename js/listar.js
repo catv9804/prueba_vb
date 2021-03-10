@@ -1,19 +1,20 @@
 $(document).ready(function(){
     // Trayendo las actividades
-    fetchCategorias();
-function fetchCategorias() {
+    fetchEntradas();
+function fetchEntradas() {
     $.ajax({
-      url: '../model//select.php',
+      url: '../model/listar.php',
       type: 'GET',
       success: function(response) {
         console.log("Llenando el select")
         console.log(response)
-        const categorias= JSON.parse(response);
+        const entradas= JSON.parse(response);
         let template = '';
-        categorias.forEach(categoria => {
+        entradas.forEach(entrada => {
 
           template += `
-          <option value="${categoria.id}">${categoria.nombre}</option>
+          <li id="${entrada.id}">${entrada.nombre}
+          <br> ${entrada.contenido}</li>
                   
                 `
         });

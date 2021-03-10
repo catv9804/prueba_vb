@@ -3,7 +3,7 @@ $(document).ready(function(){
     fetchCategorias();
 function fetchCategorias() {
     $.ajax({
-      url: '../controller/selectautores.php',
+      url: '../model/selectautores.php',
       type: 'GET',
       success: function(response) {
         console.log("Llenando el select de autores")

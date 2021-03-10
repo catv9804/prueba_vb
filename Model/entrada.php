@@ -1,6 +1,6 @@
 <?php
 if( isset($_POST['submit'])){
-    $titulo= $_POST['titulo'];
+    $titulo= $_POST['nombre'];
     $contenido=$_POST['contenido'];
 
 }
